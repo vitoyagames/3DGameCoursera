@@ -3,34 +3,23 @@ using System.Collections;
 
 public class BallController : MonoBehaviour {
 
-	public delegate void FondoOlla();
-	public static event FondoOlla OnFondoOlla;
-
-	public delegate void BolaDestruida();
-	public static event BolaDestruida OnBolaDestruida;
-
-	public GameObject generadorRampa;
-
-	public float tDespuesOlla = 5f;
-
 	private Rigidbody rgb;
 	private SphereCollider col;
 	private Material m;
-	private bool floatingToGeneradorRampa = false;
-	private float tIni;
-	Vector3 pIni;
+	public GameObject bola;
 
 	// Use this for initialization
 	void Start () {
 		rgb = GetComponent<Rigidbody> ();
 		col = GetComponent<SphereCollider> ();
 		m = GetComponent<Renderer>().material;
-		generadorRampa = GameObject.Find ("GeneradorRampa");
+		//generadorRampa = GameObject.Find ("GeneradorRampa");
+		bola=GameObject.Find("ball");
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (floatingToGeneradorRampa) {
+		/* if (floatingToGeneradorRampa) {
 			float t = (Time.time - tIni) / tDespuesOlla;
 			if (t < 1f) {
 				Vector3 p = Vector3.Lerp (pIni, generadorRampa.transform.position, t);
@@ -40,24 +29,14 @@ public class BallController : MonoBehaviour {
 				MakeGhost ( false );
 				ResetRigidbody ();
 			}
-		}
+		} */
 	}
 
 	void OnTriggerEnter(Collider other) {
-		if (other.gameObject.name.Contains ("FondoOlla") && !floatingToGeneradorRampa) {
-			//ResetRigidbody ();
-			MakeGhost ( true );
-			floatingToGeneradorRampa = true;
-			tIni = Time.time;
-			pIni = transform.position;
-			//gameObject.transform.position = generadorRampa.transform.position;
-			if (OnFondoOlla != null)
-				OnFondoOlla ();
-		}
-		if (other.gameObject.name.Contains ("phonograph")) {
-			if (OnBolaDestruida != null)
-				OnBolaDestruida ();
-			Destroy (gameObject);
+		if (other.gameObject.tag == "Book") {
+			//if (OnBolaDestruida != null)
+				//OnBolaDestruida ();
+			Destroy (gameObject,0.3f);
 		}
 	}
 

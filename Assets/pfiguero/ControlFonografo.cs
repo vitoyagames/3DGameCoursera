@@ -55,13 +55,13 @@ public class ControlFonografo : MonoBehaviour {
 
 	void OnEnable()
 	{
-		BallController.OnBolaDestruida += BolaDestruida;
+		//BallController.OnBolaDestruida += BolaDestruida;
 	}
 
 
 	void OnDisable()
 	{
 		gameManager.offsetSong = source.time;
-		BallController.OnBolaDestruida -= BolaDestruida;
+		//BallController.OnBolaDestruida -= BolaDestruida;
 	}
 }
