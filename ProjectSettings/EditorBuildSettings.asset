@@ -7,9 +7,17 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/pantallaIntro.unity
+    guid: 794e458eda72a0b42b80cdd845e735aa
   - enabled: 1
     path: Assets/Scenes/principal.unity
+    guid: 115f3562363344b94966afa8502604b7
   - enabled: 1
+    path: Assets/Scenes/room-vitoya.unity
+    guid: 3002bbf73becc4da09c05496b22751a3
+  - enabled: 0
     path: Assets/Scenes/room-pfiguero.unity
+    guid: 2e9fb86ee0996da409e1f43575b3d517
   - enabled: 0
     path: Assets/Scenes/room-pfiguero-small.unity
+    guid: bac2b02f0dc3a498e86dafc3d9929285
+  m_configObjects: {}
