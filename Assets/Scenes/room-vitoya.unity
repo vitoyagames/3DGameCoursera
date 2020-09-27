@@ -886,6 +886,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 10800000, guid: bf495eacf58e31146ab012aa89ac68da, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf495eacf58e31146ab012aa89ac68da, type: 3}
       propertyPath: maxDuration
       value: 1000
@@ -927,6 +931,22 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 19800008, guid: bf495eacf58e31146ab012aa89ac68da, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800010, guid: bf495eacf58e31146ab012aa89ac68da, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800010, guid: bf495eacf58e31146ab012aa89ac68da, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800010, guid: bf495eacf58e31146ab012aa89ac68da, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800010, guid: bf495eacf58e31146ab012aa89ac68da, type: 3}
       propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
       objectReference: {fileID: 0}
@@ -1423,7 +1443,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 3d76166780b23407ebf63243ce12db7b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1519,9 +1539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ce64e31444b473eb95b7292a126dc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 8c33221dee501429a9a53e4dc764befe, type: 2}
-  timeoutBola: 8
-  deltaPitch: 0.05
 --- !u!1001 &904202913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1914,6 +1931,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6289603, y: 2.053971, z: 2.7710497}
   m_Center: {x: 0, y: -0.02698547, z: 1.3859707}
+--- !u!1 &1029888791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 102482, guid: 5384f901620d528498e7930f27d7d8ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 1911512867}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1029888792
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029888791}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.960658, y: 2.48349, z: 4.289159}
+  m_Center: {x: -0.36148113, y: 0.741745, z: 0.13779119}
 --- !u!1001 &1064334168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2465,6 +2501,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: -0.110415146
       objectReference: {fileID: 0}
+    - target: {fileID: 13798470, guid: 210169a41db964d7ab4096b98c890134, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dd57fea2d38633a42be0ca58ae57c683, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 210169a41db964d7ab4096b98c890134, type: 3}
 --- !u!1 &1308236156
@@ -2968,6 +3008,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1724911451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724911448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3484c2b84282e549992c83132e8d9ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1803362362
 GameObject:
   m_ObjectHideFlags: 0
@@ -3239,6 +3291,10 @@ PrefabInstance:
     - target: {fileID: 102482, guid: 5384f901620d528498e7930f27d7d8ce, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 102482, guid: 5384f901620d528498e7930f27d7d8ce, type: 3}
+      propertyPath: m_TagString
+      value: Fire
       objectReference: {fileID: 0}
     - target: {fileID: 141202, guid: 5384f901620d528498e7930f27d7d8ce, type: 3}
       propertyPath: m_StaticEditorFlags

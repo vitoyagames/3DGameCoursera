@@ -4,11 +4,11 @@ using UnityEngine.Audio;
 
 public class ControlFonografo : MonoBehaviour {
 
-	public AudioMixer audioMixer;
+/* 	public AudioMixer audioMixer;
 	public float timeoutBola = 8f;
 	public float deltaPitch = .05f;
 	private float minPitch = .2f;
-	private float curPitch = 1f;
+	private float curPitch = 1f; */
 	private AudioSource source;
 
 	private GameManager gameManager=null;
@@ -16,7 +16,7 @@ public class ControlFonografo : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		source = GetComponent<AudioSource> (); // first audio source
-		GameObject g = GameObject.Find ("GameManager");
+		/* GameObject g = GameObject.Find ("GameManager");
 		if (g != null) {
 			gameManager = g.GetComponent<GameManager> ();
 			curPitch = gameManager.pitch;
@@ -24,7 +24,7 @@ public class ControlFonografo : MonoBehaviour {
 			if (gameManager.yaHuboEarthquake) {
 				Invoke ("DecreasePitch", timeoutBola);
 			}
-		}
+		} */
 	}
 	
 	// Update is called once per frame
@@ -32,7 +32,7 @@ public class ControlFonografo : MonoBehaviour {
 	
 	}
 
-	public void BolaDestruida() {
+/* 	public void BolaDestruida() {
 		CancelInvoke ();
 		if (audioMixer != null) {
 			curPitch = 1f;
@@ -63,5 +63,5 @@ public class ControlFonografo : MonoBehaviour {
 	{
 		gameManager.offsetSong = source.time;
 		//BallController.OnBolaDestruida -= BolaDestruida;
-	}
+	} */
 }
